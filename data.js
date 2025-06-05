@@ -119,3 +119,34 @@ class Impiegato extends Persona{
 
 const impe = new Impiegato('gino', 'rossi', 55, [], 'M', 'manovale')
 impe.saluta();
+
+
+class Utente {
+constructor (nome, nutente, età, console){
+  
+  this.nome = nome,
+  this.nutente = nutente,
+  this.età = età,
+  this.console = console
+}
+
+display(){
+  return `Benvenuto ${this.nome}, stai giocando su ${this.console}?`
+}
+}
+
+class skill extends Utente {
+  constructor(nome, nutente, età, console,trofe){
+    super(nome, nutente, età, console)
+
+    this.trofei = trofe;
+  }
+    diss(){
+      return `Benvenuto ${this.nome}, hai ottenuto ${this.trofei} trofei`
+    }
+  }
+
+  let Gibbo = new Utente('gabriele', 'gibbo', 19, 'PS4')
+  console.log(Gibbo.display())
+  Gibbo = new skill('gabriele', 'gibbo', 19, 'PS4', 18)
+  console.log(Gibbo.diss())
