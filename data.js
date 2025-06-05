@@ -150,3 +150,31 @@ class skill extends Utente {
   console.log(Gibbo.display())
   Gibbo = new skill('gabriele', 'gibbo', 19, 'PS4', 18)
   console.log(Gibbo.diss())
+
+  class Coglioni {
+    constructor(name, surname, età){
+      this.nome = name
+      this.cognome = surname
+      this.età = età
+    }
+
+    saluta(){
+      return `Benvenuto ${this.nome}, lo sai che sei un coglione?`
+    }
+  }
+
+  class Minchioni extends Coglioni {
+    constructor (name, surname, età, passione){
+      super(name, surname, età)
+
+      this.passione = passione
+    }
+
+    okk(){
+      return `Ciao ${this.nome}, la tua passione è ${this.passione}`
+    }
+  }
+
+  const Minchione = new Coglioni('paolo', 'rossi', 22, 'calcio')
+  console.log(Minchione.saluta())
+  console.log(Minchione.okk())
